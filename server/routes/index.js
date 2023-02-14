@@ -4,5 +4,5 @@ import { postRoutes } from "./post.routes.js";
 
 export const routes = Router();
 
-routes.use('/post', postRoutes);
-routes.use('/openai', openAiRoutes);
+routes.use("/post", postRoutes);
+routes.use("/openai", openAiRoutes);
