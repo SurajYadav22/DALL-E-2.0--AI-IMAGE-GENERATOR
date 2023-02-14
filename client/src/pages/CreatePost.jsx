@@ -6,7 +6,7 @@ import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
 
 // const apiUrl = import.meta.env.VITE_API_URL;
-const apiUrl = "http://localhost:5000";
+const apiUrl = "https://dall-e-20-ai-image-generator-production.up.railway.app";
 
 let initFormData = { name: "", prompt: "", photo: "" };
 
@@ -28,7 +28,7 @@ const CreatePost = () => {
           },
         });
         const data = await res.json();
-        console.log(data, "DATA,frontend");
+        // console.log(data, "DATA,frontend");
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
       } catch (error) {
         alert(error);

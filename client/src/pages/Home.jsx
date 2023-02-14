@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
 
 // const apiUrl = import.meta.env.VITE_API_URL;
-const apiUrl = "http://localhost:5000";
+const apiUrl = "https://dall-e-20-ai-image-generator-production.up.railway.app";
 
 const RenderCard = ({ data, title }) => {
   if (data.length > 0) {
