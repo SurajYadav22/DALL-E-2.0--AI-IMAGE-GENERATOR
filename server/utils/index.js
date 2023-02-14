@@ -12,17 +12,17 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export const getAiImageFromOpenAi = async (prompt) => {
-  console.log(prompt, "PROMPT FOR IMAGE");
+  // console.log(prompt, "PROMPT FOR IMAGE");
   const aiResponse = await openai.createImage({
-    prompt,
+    prompt: prompt,
     n: 1,
     size: "1024x1024",
     response_format: "b64_json",
   });
-  console.log(aiResponse, "RESPONSE");
+  // console.log(aiResponse, "RESPONSE");
   const image = aiResponse.data.data[0].b64_json;
 
-  console.log(image, "IMAGE GENERATED SUCCESSFULLY");
+  // console.log("IMAGE GENERATED SUCCESSFULLY");
   return image;
 };
 
